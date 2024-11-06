@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+    <style>
+        /* Reset de estilo e configurações gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://img.freepik.com/fotos-gratis/cena-de-pixels-graficos-de-8-bits-com-pessoa-no-banco-ao-por-do-sol_23-2151120905.jpg?semt=ais_hybrid') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Contêiner do painel */
+        .panel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        /* Card do painel de controle */
+        .card {
+            background-color: rgba(255, 255, 255, 0.1); /* Transparência do card */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            backdrop-filter: blur(10px); /* Efeito de vidro */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card h2 {
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        /* Estilo dos botões */
+        .button {
+            display: inline-block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .button:active {
+            background-color: #00448a;
+            transform: translateY(0);
+        }
+
+        /* Estilo responsivo para garantir que o painel fique bom em telas pequenas */
+        @media screen and (max-width: 480px) {
+            .card {
+                width: 85%;
+                padding: 30px;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="panel-container">
+        <div class="card">
+            <h2>Painel de Controle</h2>
+            <a href="cadastro_usuarios.php" class="button">Cadastro de Usuários</a>
+            <a href="cadastro_tarefas.php" class="button">Cadastro de Tarefas</a>
+            <a href="visualizar_tarefas.php" class="button">Visualizar Tarefas</a>
+        </div>
+    </div>
+</body>
+</html>
